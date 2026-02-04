@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>디자인나라 - 유흥배너 전문 제작</title>
+  <meta name="description" content="유흥배너 전문 제작. 빠른 작업, 높은 퀄리티, 합리적인 가격. 5장 기준 15만원 / GIF 20만원 / 작업기간 2일">
+  <meta name="keywords" content="유흥배너, 배너제작, 유흥 배너, 배너 제작, 빠른 배너 제작, 고퀄 배너">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      padding: 80px 20px 60px;
+      text-align: center;
+      background: linear-gradient(to bottom, #111 0%, #0a0a0a 100%);
+    }
+
+    .logo {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+
+    .tagline {
+      margin-top: 1rem;
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      color: #bbbbbb;
+      font-weight: 300;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .price-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 2.5rem 1.8rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .price-card:hover {
+      border-color: #555;
+      transform: translateY(-8px);
+    }
+
+    .price {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 1.2rem 0 0.8rem;
+    }
+
+    .info {
+      margin: 1.2rem 0 1.8rem;
+      color: #ccc;
+      font-size: 1.05rem;
+    }
+
+    .period {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #999;
+      margin: 2rem 0;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 1rem;
+      color: #888;
+      margin: 1.5rem 0 3rem;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #222;
+      color: white;
+      font-weight: 500;
+      padding: 0.9rem 2.4rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      border: 1px solid #444;
+    }
+
+    .btn:hover {
+      background: #333;
+      border-color: #666;
+      transform: translateY(-2px);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .portfolio-item {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .portfolio-item:hover {
+      border-color: #444;
+      transform: translateY(-4px);
+    }
+
+    .banner-preview {
+      background: #000;
+      aspect-ratio: 800 / 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .banner-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .portfolio-item .info {
+      padding: 1.2rem;
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    .portfolio-item strong {
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .contact-area {
+      text-align: center;
+      padding: 100px 20px 120px;
+      background: #0a0a0a;
+    }
+
+    .contact-title {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .kakao-btn {
+      display: inline-block;
+      background: #fee500;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 1rem 3rem;
+      border-radius: 999px;
+      margin-top: 2rem;
+      box-shadow: 0 8px 25px rgba(254,229,0,0.25);
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: #555;
+      font-size: 0.95rem;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 60px 15px 50px; }
+      .section { padding: 60px 0; }
+      .price-card { padding: 2rem 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">디자인나라</div>
+      <div class="tagline">빠르고 고퀄리티 배너 제작</div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section class="section">
+      <h2>제작 가격</h2>
+      
+      <div class="price-grid">
+
+        <div class="price-card">
+          <h3>정적 배너 5장</h3>
+          <div class="price">150,000원</div>
+          <div class="info">
+            5개 사이즈 기준<br>
+            고해상도 PNG / JPG 제공
+          </div>
+          <a href="https://open.kakao.com/o/여기에링크" class="btn">문의하기</a>
+        </div>
+
+        <div class="price-card">
+          <h3>GIF 움직이는 배너</h3>
+          <div class="price">200,000원</div>
+          <div class="info">
+            5장 기준 GIF 제작
+          </div>
+          <a href="https://open.kakao.com/o/여기에링크" class="btn">문의하기</a>
+        </div>
+
+      </div>
+
+      <div class="period">
+        작업 기간 : 약 2일 소요
+      </div>
+
+      <div class="note">
+        ※ 추후 번호·날짜 등 단순 수정은 무료로 도와드립니다.
+      </div>
+
+    </section>
+
+    <section class="section">
+      <h2>제작 샘플 (기본 800×1000px)</h2>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+          <div class="banner-preview">
+            <img src="https://via.placeholder.com/800x1000/1a1a1a/cccccc?text=디자인나라+샘플+1" alt="배너 샘플 1">
+          </div>
+          <div class="info">
+            <strong>800 × 1000</strong><br>
+            세로형 배너 예시
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="banner-preview">
+            <img src="https://via.placeholder.com/800x1000/222222/aaaaaa?text=디자인나라+샘플+2" alt="배너 샘플 2">
+          </div>
+          <div class="info">
+            <strong>800 × 1000</strong><br>
+            세로형 배너 예시
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="banner-preview">
+            <img src="https://via.placeholder.com/800x1000/333333/bbbbbb?text=디자인나라+샘플+3" alt="배너 샘플 3">
+          </div>
+          <div class="info">
+            <strong>800 × 1000</strong><br>
+            세로형 배너 예시
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="banner-preview">
+            <img src="https://via.placeholder.com/800x1000/444444/cccccc?text=디자인나라+샘플+4" alt="배너 샘플 4">
+          </div>
+          <div class="info">
+            <strong>800 × 1000</strong><br>
+            세로형 배너 예시
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <div class="contact-area">
+    <div class="container">
+      <h2 class="contact-title">카톡으로 간편하게 문의하세요</h2>
+      <p style="font-size:1.2rem; color:#bbb; margin:1.5rem 0 2.5rem; max-width:600px; margin-left:auto; margin-right:auto;">
+        원하는 스타일이나 참고 이미지를 보내주시면<br>
+        빠르게 진행 방향과 견적을 안내드립니다.
+      </p>
+      <a href="https://open.kakao.com/o/여기에링크" class="kakao-btn">
+        카카오톡 상담 바로가기
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 디자인나라 - 유흥배너 제작 전문</p>
+  </footer>
+
+</body>
+</html>
